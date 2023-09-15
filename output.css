@@ -543,10 +543,6 @@ video {
   margin-right: auto;
 }
 
-.mb-36{
-  margin-bottom: 9rem;
-}
-
 .flex{
   display: flex;
 }
@@ -557,6 +553,10 @@ video {
 
 .grow{
   flex-grow: 1;
+}
+
+.flex-col{
+  flex-direction: column;
 }
 
 .justify-between{
@@ -575,6 +575,15 @@ video {
   background-repeat: no-repeat;
 }
 
+.object-cover{
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.p-12{
+  padding: 3rem;
+}
+
 .px-10{
   padding-left: 2.5rem;
   padding-right: 2.5rem;
@@ -590,8 +599,17 @@ video {
   padding-bottom: 9rem;
 }
 
+.py-8{
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
 .pb-36{
   padding-bottom: 9rem;
+}
+
+.pt-6{
+  padding-top: 1.5rem;
 }
 
 .text-center{
@@ -606,18 +624,19 @@ video {
   font-family: Fraunces, serif;
 }
 
+.text-5xl{
+  font-size: 3rem;
+  line-height: 1;
+}
+
 .text-8xl{
   font-size: 6rem;
   line-height: 1;
 }
 
-.text-9xl{
-  font-size: 8rem;
-  line-height: 1;
-}
-
-.font-black{
-  font-weight: 900;
+.text-xl{
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 .font-bold{
@@ -628,12 +647,22 @@ video {
   text-transform: uppercase;
 }
 
-.leading-4{
-  line-height: 1rem;
+.leading-relaxed{
+  line-height: 1.625;
 }
 
 .tracking-widest{
   letter-spacing: 0.1em;
+}
+
+.text-dark-grayish-blue{
+  --tw-text-opacity: 1;
+  color: hsl(232 10% 55% / var(--tw-text-opacity));
+}
+
+.text-grayish-blue{
+  --tw-text-opacity: 1;
+  color: hsl(210 4% 67% / var(--tw-text-opacity));
 }
 
 .text-white{
@@ -641,3 +670,56 @@ video {
   color: hsl(0 0% 100% / var(--tw-text-opacity));
 }
 
+.btn {
+  position: relative;
+  z-index: 1;
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  width: 110%;
+  height: 10px;
+  background-color: hsl(51, 100%, 49%);
+  opacity: 0.3;
+  bottom: -2px;
+  left: -5%;
+  z-index: 0;
+  border-radius: 2px;
+}
+
+.btn-two {
+  position: relative;
+  z-index: 1;
+}
+
+.btn-two::after {
+  content: '';
+  position: absolute;
+  width: 110%;
+  height: 10px;
+  background-color: hsl(7, 99%, 70%);
+  opacity: 0.3;
+  bottom: -2px;
+  left: -5%;
+  z-index: 0;
+  border-radius: 2px;
+}
+
+@media (min-width: 1024px){
+  .lg\:w-1\/2{
+    width: 50%;
+  }
+
+  .lg\:flex-row{
+    flex-direction: row;
+  }
+
+  .lg\:flex-row-reverse{
+    flex-direction: row-reverse;
+  }
+
+  .lg\:text-left{
+    text-align: left;
+  }
+}
